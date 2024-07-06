@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FileZilla3 version="3.52.0.5" platform="mac">
+	<Queue>
+		<Server>
+			<Host>ftp.unm.edu</Host>
+			<Port>22</Port>
+			<Protocol>1</Protocol>
+			<Type>0</Type>
+			<User>isbayram</User>
+			<Pass encoding="base64">R2xhc2dvdzIzOTQq</Pass>
+			<Logontype>1</Logontype>
+			<EncodingType>Auto</EncodingType>
+			<BypassProxy>0</BypassProxy>
+			<File>
+				<LocalFile>/Users/isbayram/Downloads/safak_seyc.jpeg</LocalFile>
+				<RemoteFile>safak_seyc.jpeg</RemoteFile>
+				<RemotePath>1 0 3 nfs 4 user 1 i 8 isbayram 11 public_html</RemotePath>
+				<Flags>0</Flags>
+				<Size>178377</Size>
+			</File>
+			<File>
+				<LocalFile>/tmp/index.html</LocalFile>
+				<RemoteFile>index.html</RemoteFile>
+				<RemotePath>1 0 3 nfs 4 user 1 i 8 isbayram 11 public_html</RemotePath>
+				<Flags>16</Flags>
+				<Size>13303</Size>
+			</File>
+		</Server>
+	</Queue>
+</FileZilla3>

@@ -1,0 +1,190 @@
+%\documentstyle[11pt,a4]{article}
+%\documentclass[a4paper]{article}
+\documentclass[letterpaper, 10.5pt]{article}
+% Seems like it does not support 9pt and less. Anyways I should stick to 10pt.
+%\documentclass[a4paper, 9pt]{article}
+\topmargin-1.5cm
+\usepackage[compress]{cite}
+\usepackage{fancyhdr}
+\usepackage{pagecounting}
+\usepackage[dvips]{color}
+\usepackage{amsmath,amssymb,amsthm,mathrsfs,amsfonts,dsfont}
+
+
+% Color Information from - http://www-h.eng.cam.ac.uk/help/tpl/textprocessing/latex_advanced/node13.html
+
+% NEW COMMAND
+% marginsize{left}{right}{top}{bottom}:
+%\marginsize{3cm}{2cm}{1cm}{1cm}
+%\marginsize{0.85in}{0.85in}{0.625in}{0.625in}
+
+\advance\oddsidemargin-0.95in
+%\advance\evensidemargin-0.5in
+\textheight9.49in
+\textwidth6.85in
+\newcommand\bb[1]{\mbox{\em #1}}
+\def\baselinestretch{1.00}
+%\pagestyle{empty}
+
+\newcommand{\hsp}{\hspace*{\parindent}}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+%\definecolor{gray}{rgb}{1.0,1.0,1.0}
+
+
+\begin{document}
+\thispagestyle{fancy}
+%\pagenumbering{gobble}
+%\fancyhead[location]{text}
+% Leave Left and Right Header empty.
+\lhead{}
+\rhead{}
+%\rhead{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+%\fancyfoot[C]{\footnotesize \textcolor{gray}{http://www.stanford.edu/$\sim$sundaes/application}}
+
+\pagestyle{myheadings}
+\markboth{I. Safak Bayram}{I. Safak Bayram}
+
+%\pagestyle{fancy}
+%\lhead{\textcolor{gray}{\it \.{I}slam \c{S}afak Bayram}}
+%\rhead{\textcolor{gray}{\thepage/\totalpages{}}}
+%\rhead{\thepage}
+%\renewcommand{\headrulewidth}{0pt}
+%\renewcommand{\footrulewidth}{0pt}
+%\fancyfoot[C]{\footnotesize http://www.stanford.edu/$\sim$sundaes/application}
+%\ref{TotPages}
+
+% This kind of makes 10pt to 9 pt.
+%\begin{small}
+
+%\vspace*{0.1cm}
+\begin{center}
+{\LARGE \bf Current and Future Research Vision}\\
+\vspace*{0.1cm}
+{\normalsize I. Safak Bayram (isbayram@unm.edu) }
+\end{center}
+%\vspace*{0.2cm}
+
+%\begin{document}
+%\centerline {\Large \bf Research Statement for Sundar Iyer}
+%\vspace{0.5cm}
+
+% Write about research interests...
+%\footnotemark
+%\footnotetext{Check This}
+%Mathematical Mathematical Psychology
+
+\subsection*{\textbf{Summary}}
+My research primarily focuses on understanding and solving diverse problems arising in emerging \emph{smart power grids} applications that involve \emph{active customer participation} such as, but not limited to, demand-side management, renewable energy generation, plug-in electric vehicle charging (PEV), and energy trading. In particular, I develop mathematical models and architectures to bridge the gap between \emph{social, economic, and technological} domains of smart power grids to unlock the promised environmental and economic savings. Even though there have been major improvements in enabling technologies such as higher efficiency photovoltaic cells, lower cost energy storage units, and longer range PEVs, there is a fundamental issue on the \emph{economic} operation of power grids. The existing electricity grids are not designed to support two-way power flow or handle high penetrations of PEVs. Therefore, a new set of operating rules need to be devised to mediate smooth transition towards smart grids to ensure system reliability, power quality, and optimal provisioning of new assets. Moreover, widespread penetration of smart grid technologies necessitates inclusion and empowerment of consumers, communities, and societies. End-users in smart grids are expected to move from a passive role as energy consumers to an active role as ``prosumers", their possible actions and decisions need to be carefully incorporated with future system designs and architectures. In the current literature, end-users are modeled as ``rational, selfish, and profit maximizers" and they are assumed to make perfect decisions. However, recent studies on \emph{behavioral economics} show that people are neither fully rational nor completely selfish. In particular, most people are \emph{loss averse} when taking critical decisions under \emph{risk} (i.e., low battery level, intermittent PV output) which contradicts current assumptions. Therefore, I seek to develop more realistic models by incorporating behavioral science and mathematical psychology to capture the responses of end-users to grid conditions. I am further interested in \emph{sustainable transportation} systems and I investigate complex system dynamics and their impacts on energy and CO2 emissions. My research has been funded by Qatar Foundation, Qatar National Research Fund (QNRF), and National Science Foundation (NSF)-Cyber-Innovation for Sustainability Science and Engineering. In what follows, I will cover my research background, accomplishments, and future research directions.
+
+\subsection*{1. Plug-in Electric Vehicle Grid Integration}
+
+During the past decade, we have been witnessing an increasing interest in promoting mainstream adoption of the PEVs due to their various economic and environmental benefits. Integrating PEVs into power grids necessitates a holistic analysis due to the numerous complex interactions that it brings about at the interface of the two already complex networks, i.e., electricity and transportation systems. Forming various inferential, scheduling, and management decisions involve decision mechanisms that require an interdisciplinary approach.  I proposed various models and architectures for economic operation of power grids. In particular, I use tools from Control Theory, Queueing Theory, Optimization Theory, and Economics to address fundamental problems. In the next sections, I present and highlight some of the models that I developed for PEV grid integration.
+
+\subsubsection*{1.1 PEV Charging Considering Battery Dynamics}
+
+Charging PEV batteries at customer garages is a common practice. In this case, the goal of the PEV owner is to receive charging service at a \emph{minimum cost} by a certain \emph{deadline}. Cost components include electricity \emph{prices} which could be time-of-use or dynamic tariffs, \emph{battery degradation}, and discomfort due to delayed or rejected service due to resource shortage. Battery degradation cost depends on an array of factors, the predominant ones being charging power, depth-of-discharge, and temperature. In garage charging applications, I showed with case studies that battery degradation cost limits the maximum charging rate, while electricity price determines charging periods. For the case of fast charging stations, waiting times can become a major issue. Moreover, when the battery \emph{state of charge} (SoC) gets close to hundred percent, the charging duration gets longer. To tackle this issue, I proposed a methodology to limit the maximum SoC level and showed that overall service time reduces significantly. 
+
+\subsubsection*{1.2 Capacity Planning and Energy Storage Sizing for Large-Scale Charging Stations}
+The proliferation of PEVs requires the deployment of large-scale public charging stations. Such stations are installed in parking lots, which can be deployed in hospitals, shopping malls, airports, and workplace campuses. I introduced a large charging station architecture, formalized a \emph{probabilistic framework} to capture its operational characteristics, and assessed its performance (defined as the percentage of served PEVs). The charging facility is equipped with a local \emph{energy storage} device, which aids smoothing stochastic PEV demands so that grid assets are not negatively affected by customer demand. I presented a stochastic framework for analyzing the optimal size of current energy storage technologies. The model is based on calculating \emph{cumulative distribution function} (CDF) of the energy level in the battery using fluid dynamics. \emph{Optimal sizing} of energy storage systems (ESSs) plays a critical role in balancing the efficiency and reliability of charging stations. In principle, overprovisioning ESS sizes lead to under-utilizing costly assets and underprovisioning them taxes operation lifetime. My calculations showed that capital expenditure cost could be significantly reduced when compared to peak hour capacity planning.
+
+\subsubsection*{1.3 Fast Charging Station Design}
+Increased availability of public fast-charging networks enhances customers' confidence and accelerates PEV adoption. However, given the \emph{strain} that such a network can \emph{exert} on the power grid, and the mobility of loads represented by PEVs, operating it efficiently is a challenging and complex problem. I introduced a fast DC charging station architecture, developed a stochastic model to capture its operational characteristics and evaluated its performance (defined as
+the \emph{loss of load probability}). The charging station is equipped with a local \emph{energy storage} device that aids smoothing the stochastic customer demand. Furthermore, I examined how different storage technologies can affect the performance of the system. IEEE SmartGridComm'12 technical program committee has recognized my inter-disciplinary research effort by giving the \emph{Best Paper Award} for Smart Grid Architecture and Models track.
+
+
+\subsubsection*{1.4 Demand Response for Charging Stations}
+Customer demand may gradually increase due to increasing PEV adoption or infrastructure-related issues, such as charging stations experiencing temporarily high demand due to road closures and detours. In such circumstances, a station operator needs to take \emph{dynamic actions} to match the demand with the available resources. I proposed two demand response programs for charging stations. In the first one, fast charging station operator offers \emph{incentives} to customers to postpone their service request, in turn, customers get discounted and guaranteed service in the next hour. In the second model, station serves \emph{multiple customer classes} (i.e., fast, slow, etc.) and system operator aims to maximize \emph{social welfare} by controlling PEV demand through optimal pricing. I showed that dynamic pricing plays a pivotal role in controlling the rate of service requests. In principle, increasing the service rates reduces the service demand, reduces service congestion, and as a result reduces (or eliminates) service outages. 
+
+\subsubsection*{1.5 Coordination Among Stations: A Game Theoretic Approach}
+
+For a network of charging facilities, I introduce a \emph{game-theoretic} based decentralized control mechanism to alleviate negative impacts from the PEV demand. The proposed mechanism takes into consideration the \emph{non-uniform spatial distribution} of PEVs that induces uneven power demand at each charging facility, and aims to: (i) avoid straining grid resources by offering price \emph{incentives} so that customers accept being routed to less busy stations, (ii) maximize total revenue by serving more customers with the same amount of grid resources, and (iii) provide charging service to customers with a certain level of \emph{Quality-of-Service (QoS)}, the latter defined as the long-term customer blocking probability. The ultimate goal is to attract customers to drive to a more distant station to balance the arrival rate at each station. Thus, the charging network owner acts as a leader who can commit to a strategy before followers (customers) can pick their strategies.
+
+\subsection*{2. Demand-side Management }
+Over the last two years, I have been working on \emph{demand-side management} (DSM) for the electricity sector. In particular, I have created the roadmap (2016-2020) for Qatar to reduce its peak electricity consumption and support renewable energy integration targets. The roadmap has three parts: (1) Creating a high-resolution database, (2) Analyzing and assessing various demand-side management tools, and (3)  Implementations and policy recommendations.
+
+\subsubsection*{2.1 High-resolution Data Repository and Anaylses}
+The crucial part of the DSM strategy is to create a \emph{high-resolution} electricity demand data repository to understand and analyze consumption patterns. To generate \emph{country-level} load profiles, I have developed a \emph{web crawling} program using C-sharp and MySQL. The code connects to GCC Interconnection Authority website (www.gccia.org.qa) website at every five seconds and grabs the consumption data and saves it in the database. This is the first dataset available in the GCC region and contains data from summer 2015 to present day.  Furthermore, I analyzed the electricity consumption patterns in Qatar and showed that end-users in Qatar exhibit unique patterns: daily load profiles are almost flat, while there are significant differences between summer and winter months due to air-conditioning load, and weekend and weekday profiles are almost similar. Moreover, I proposed a \emph{top-down methodology} to estimate the \emph{cooling load} using the electricity load profiles. Estimation is based on calculating the difference between a reference load profile which represents little or no cooling demand, and the rest of the days where cooling takes place. The results show that more than 37\% of the total electricity is consumed for cooling which represents the highest share of residential consumption.
+
+Moreover, my graduate students and I installed 12 Smappee \emph{energy monitors} in various households. Energy monitors measure the electricity consumption and perform \emph{appliance-level} load profiling using pattern recognition techniques. This way, I assess the \emph{flexibility} of customer loads which is critical in quantifying demand-side management potential. Moreover, such datasets hinder useful information for PV rooftop and energy storage systems. Self-consumption of PV output reduces ownership cost, while storage systems can be useful to store PV output during winter when consumption levels decrease significantly. In addition, I have lead the efforts to install \emph{smart meters} to more than six hundred university housing units to obtain \emph{household-level} consumption profiles. When the meters became officially operational within next months, I will conduct field experiments to measure consumer responsiveness to different pricing regimes. Moreover, I will work on smart meter \emph{data analytics} to deduce electricity consumption behavior and develop \emph{forecasting} methods. Such applications are critical for PV rooftop systems to promote the value added by those systems. 
+
+%\subsubsection*{Load Profiling}
+\subsubsection*{2.2 Demand Response Experiments}
+Peak demand reduction can be achieved by implementing \emph{dynamic pricing} policies or \emph{direct-load control} (DLC) mechanisms. The extent to which dynamic pricing will be effective depends on customer \emph{willingness} to participate, household disposable income, and \emph{discomfort} associated with load dimming. To understand potential impacts, I examined the effects of pricing hikes in Bahrain, a neighbor country with similar socio-economic characteristics, and showed that pricing is not effective during sweltering summer months, but influential in winter months. This is due to the fact that people do not want to sacrifice cooling comfort for monetary savings. As a second option, I conducted DLC in various housing units located on our campus. AC units were cycled during hot summer afternoons for various during between 15 minutes to one hour. The results indicated that \emph{demand reduction} potential is around 5 kW per 100-meter square, which is significant compared to the examples in the United States and Canada.
+
+\subsubsection*{2.3 Renewable Energy Integration}
+One of the main drivers of smart grids is the motivation towards adopting renewables. \emph{Photovoltaic (PV)} systems are one of the most popular renewable energy generation system which could be integrated to main grid in the form large \emph{PV farms (MW-level)} or could be employed in a distributed manner at customer \emph{rooftops (kW-level)}. In both cases, due to uncertainty in weather-related conditions  (i.e., variations in sunlight, clouds, aerosols, dust deposition, shading, etc.) and variability in customer \emph{load profiles}, renewable integration may impact power system operations. Sizable generation from PV farms requires \emph{ramping down} of conventional generation in the morning and \emph{ramping up} of generation in the afternoon when the sun goes down, causing the phenomenon called the \emph{duck curve}. Using NREL's SAM simulation, I studied ramping needs for Qatar and showed that even though there would be an additional cost due to ramping, current generation assets are capable of providing required ramping for 20\% PV generation which is the main target for the country. For the case of rooftops, I study \emph{self-sufficiency} and \emph{self-consumption} patterns for various household sizes to examine the amount of bidirectional power flows and their impacts on the local distribution grid. The value of PV systems could be further improved if end users show \emph{behavioral response}, i.e., shifting loads, PV systems. This way utilization of the power system would increase and reduce energy storage size requirements.
+
+
+\subsubsection*{3. Sustainable Transportation Systems}
+\subsubsection*{3.1 System Dynamics for Urban Transportation}
+The transportation sector accounts for about a quarter of global energy consumption and is a major source of carbon emissions. Understanding the complex dynamics of various factors and making projections are of vital importance to achieve sustainability in transportation. I developed a \emph{system dynamics} (SD) model for Istanbul, one of the major mega-cities of the world, to simulate the urban motorized passenger transport system to analyze different scenarios and their potential impacts on mitigating the \emph{energy consumption} and \emph{CO2 emissions}. The SD model includes four subsystems: population, household disposable income, transport, and energy and CO2 emissions. Based on historical data and model validation, I forecasted the energy consumption and CO2 emissions up to the year 2025 under the following scenarios: business as usual scenario (BAU), supply management measures (SMM), travel demand management (TDM), and integrated scenarios composed of SMM and TDM. Under the BAU scenario, I forecasted that energy consumption per capita will increase by 72\% from 2016 to 2025, while CO2 emissions per capita are expected to rise by 75\% during the same period. The results indicate that integrated scenario achieves the best results by offering a 33.5\% expected reduction in total energy consumption and a 32.8\% projected reduction in CO2 emissions. I will apply a similar methodology to see the impacts of plug-in electric vehicle integration on CO2 emissions and power system generation upgrades.
+
+\subsubsection*{3.2 Annual Delivery Plan for LNG Fleets}
+I am further interested in \emph{maritime transportation problems} which is particularly crucial for the State of Qatar to sustain its position as the largest LNG gas producer and distributor in the world. I address issues related to design an \emph{annual delivery plan} (ADP) of a large Qatari LNG producer. ADP requires determining the long-term contracts delivery dates and the assignment of the vessels to the cargoes, while accommodating several constraints including partial delivery, ship-to-ship, berth, bunkering, maintenance and liquefaction terminal inventory to achieve the objective by supporting innovative solutions that achieve greater efficiency, flexibility, and optimization of resources while meeting customer needs. This kind of problem is considered as \emph{NP-hard} problem from that I am planning to develop metaheuristics procedures to solve this problem.
+
+\subsubsection*{4. Smart Grids and Behavioral Sciences}
+In addition to expanding my existing work that is explained in the previous pages, my future research agenda is further directed towards the development of new models that would incorporate \emph{social studies} such as \emph{mathematical psychology, behavioral economics, and diffusion of innovations} to capture more realistic end-user behavior in smart grid architectures. Even though consumers are the key players in smart grids, technology designs often underestimate their roles. Specifically, social and psychological hurdles are as imperative as the technological ones to accelerate smart grid adoption. Mathematical psychology simply maps human decisions into quantitative models, while behavioral economics explains how people behave under risk and uncertainty, and diffusion of innovation models explain how new technologies disseminate among different groups in society. For the case of smart grids, this is an untapped field and has a great potential to boost the adoption of smart grid technologies. Potential case studies are explained by the following examples. The value of demand-response programs coupled systems depends on how people respond to dynamic prices during on-peak hours. According to current literature, if the \emph{expected} gain is positive, then people are assumed to participate in such programs and respond to pricing signals. However, behavioral economics suggest that on-peak to off-peak electricity prices should be more than 2 so that people would change their usage. This is because people are \emph{risk averse} and do not want to trade comfort for small economic incentives. Similarly, charging and discharging decisions for energy storage system for energy trading or participation in ancillary services depend on customer perceptions and needs. Moreover, in emerging applications PEV batteries can be used to power the grid, building, or another vehicle (V2X). In this case economic incentives offered to customers need to consider the battery SoC levels: a customer with a low SoC level may not be as convinced as a customer with a high SoC level to participate in ``V2X" applications as range anxiety refrain drivers to drain their batteries. Similarly, charging station \emph{facility location} need to meet the charging needs of \emph{early adapters} so that rest of the society will get acquainted and gain confidence. Hence, station siting problem would be to guarantee drivers to access a charging stations within a specific range in particular parts of the city. Moreover, in urban planning station locations can be used as a tool to manage the traffic by locating stations on alternative roads to balance the traffic flow. The unique merger of smart grid design and social studies will lead to new policies, regulations, and economic protocols and create an innovative educational opportunity to existing graduate and undergraduate curriculum. 
+
+\begin{thebibliography}{99}
+\bibitem{00} \textbf{I. S. Bayram} and Ali Tajer, ``Plug-in Electric Vehicle Grid Integration", Artech House Inc. ISBN 9781630810511
+\bibitem{1}\textbf{I. S. Bayram}, F. Saffouri, M. Koc, "Generation, Analysis, and Applications of High-resolution Electricity Load Profiles in Qatar", \textit{Journal on Cleaner Production}, vol. 184, May, 2018
+
+\bibitem{2} M. Ismail, \textbf{I. S. Bayram}, E. Serpedin, K. Qaraqe, ``D5G-enhanced Smart Grid", \textit{Enabling 5G Communication System to Support Vertical Industries}, Wiley (Upcoming in 2019)
+\bibitem{3} \textbf{I. S. Bayram}, ``Demand-side Management for PV GridIntegration", \textit{Solar Resource Mapping: Fundamentals and Applications}, Springer, ISBN 978-3-319-97484-2 (Upcoming in 2019)
+\bibitem{4} \textbf{I. S. Bayram} and M. Devetsikiotis``Analytical Problems in Energy Strorage Systems", \textit{Advanced Data Analytics for Power Systems}, Cambridge University Press (Upcoming in 2019)
+\bibitem{5} F. Mumtaz, \textbf{I. S. Bayram}, A. Elrayyah, ``Importance of energy storage system in the smart grid", \textit{Communication, Control and Security Challenges for the Smart Grid}, IET, ISBN: 978-1-78561-142-1, 2017
+\bibitem{6} \textbf{I. S. Bayram}, G. Michailidis, M. Devetsikiotis, S. Bhattacharya,
+and F. Granelli, Chapter-6: "Smart Vehicles in the Smart Grid: Challenges, Trends, and Applications to the Design of Charging Stations", \textit{Control for Optimization Theory of Electric Smart Grids}, Springer-Verlag (ISBN: 1461416043).
+\bibitem{7} \textbf{I. S. Bayram}, A. Tajer, M. Abdallah, and K. Qaraqe, ``A Stochastic Sizing Approach for Sharing-based Energy Storage Applications", \textit{IEEE Transactions on Smart Grid}, vol. 8, no. 3, pp. 1075-1084, May 2017 (IF 6.6).
+    \bibitem{8} \textbf{I. S. Bayram}, and T. Ustun, ``A Survey on Behind the Meter Energy Management Systems", \textit{Renewable and Sustainable Energy Reviews}, vol. 72, pp. 1208-1232, May 2017 (IF 9.2).
+    \bibitem{9} \textbf{I. S. Bayram} and A. Tajer, ``Exploiting PEV Batteries For V2X Applications", \textit{IEEE SmartGrid Newsletter}, May 2017.
+    \bibitem{10} C. Kong, R. Jovanovic, \textbf{I.S. Bayram}, M. Devetsikiotis, "A Hierarchical Optimization Model for a Network of Electric Vehicle Charging Stations", \textit{Energies}, vol. 10, no. 5, 675 (IF 2.2).  
+  \bibitem{11} \textbf{I. S. Bayram} ``Demand Profiles of GCC Members: An Overview", \textit{EAI Transactions on Smart Cities}, vol. 17, no. 5, Dec., 2017.
+  \bibitem{12} R. Jovanovic, \textbf{I. S. Bayram} ``Residential Demand Response Scheduling with Consideration of Consumer Comfort", \textit{Applied Sciences}, vol. 6, no. 1, pp 1-16, 2016 (IF 1.68).
+\bibitem{13} \textbf{I. S. Bayram}, G. Michailidis, and M. Devetsikiotis, ``Unsplittable Load Balancing in a Network of Charging Stations Under QoS Guarantees, \textit{IEEE Transactions on Smart Grid}, vol. 6, no. 3, pp. 1292-1302, May 2015 (IF 6.6).
+\bibitem{14} \textbf{I. S. Bayram}, M. Abdallah, A. Tajer, and K. Qaraqe, ``Capacity Planning Framework for EV Charging Infrastructures with Multi-Class Customers", \textit{IEEE Transactions on Smart Grid}, vol. 6, no. 4, pp. 1934-1943, July 2015 (IF 6.6).
+\bibitem{15} C. Kong, \textbf{I. S. Bayram}, M. Devetsikiotis ``Revenue Optimization Frameworks for Multi-Class PEV Charging Stations", \textit{IEEE Access}, vol. 3, pp. 2140-2150, 2015 (IF 3.2).
+\bibitem{16}Survey on Communication Technologies and Requirements for Internet of Electric Vehicles", \textit{Eurasip Journal on Wireless Communications}, vol. 223, 2014 (IF 1.52).
+\bibitem{17} \textbf{I. S. Bayram}, G. Michailidis, M. Devetsikiotis,
+and F. Granelli ``Electric Power Allocation in a Network of Fast Charging Stations'', \textit{IEEE Journal on Selected Areas in Communications}, vol. 31, no. 7, pp. 1235-1246, July 2013 (IF 8.08) \textbf{IEEE Communication Society Best Reading in Smart Grid}.
+
+\bibitem{18} I. Batur, \textbf{I. S. Bayram}, M. Koc, ``A System Dynamics Model for Scenario-based Analyses to Mitigate Energy Consumption and CO2 Emissions from Urban Motorized Passenger Transport in Istanbul", \textit{Journal on Cleaner Production} (IF 6.2).
+
+\bibitem{19} \textbf{I.S Bayram}, ``Energy Storage Sizing and Photovoltaic Self-Consumption in Selected Households in Qatar'', \textit{IEEE 8th International Conference on Power and Energy Systems}, 2018, Colombo, Sri Lanka.
+\bibitem{20} \textbf{I.S Bayram}, `` A Stochastic Simulation Model to Assess the Impacts of Electric Vehicle Charging on Power Generation: A Case Study for Qatar'', \textit{IEEE Transportation Electrification
+Conference and Expo}, 2019, Novi, MI, USA.
+\bibitem{21} R. Jovanovic, \textbf{I.S Bayram}, S. Voss, ``GRASP Approach for solving the 2-connected m-dominating set problem in Power Systems'', \textit{IEEE 12th International Conference on Compatibility, Power Electronics, and Power Engineering}, 2018, Doha, Qatar.
+\bibitem{22} \textbf{I.S Bayram}, ``Teaching Smart Power Grids: A sustainability Perspective'', \textit{IEEE 12th International Conference on Compatibility, Power Electronics, and Power Engineering}, 2018, Doha, Qatar.
+\bibitem{23} I. Batur, \textbf{I.S Bayram}, M. Koc, ``The Role of Plug-in Electric Vehicles in Reducing CO2 Emissions in Istanbul: A System Dynamics Approach", \textit{IEEE 12th International Conference on Compatibility, Power Electronics, and Power Engineering}, 2018, Doha, Qatar.
+\bibitem{24} O. Alrawi, \textbf{I.S Bayram}, M. Koc, ``High-Resolution Behind-the-Meter Load Profiling in Selected Qatari Household", \textit{IEEE 12th International Conference on Compatibility, Power Electronics, and Power Engineering}, 2018, Doha, Qatar.
+\bibitem{25} \textbf{I. S. Bayram}, O. Alrawi, H. Al-Naimi, and M. Koc, ``Direct Load Control of Air Conditioner in Qatar: An Empirical Study'', \textit{6th International Conference on Renewable Energy and Applications}, Nov 5-8, 2017, San Diego, CA, USA.
+\bibitem{25} \textbf{I. S. Bayram} and M. Koc, ``Demand Side Management for Peak Reduction and PV Integration in Qatar'', \textit{IEEE International Conference on Networking, Sensing and Control}, May 16-18, 2017, Calabria, Southern Italy.
+\bibitem{26} \textbf{I. S. Bayram}, M. Al-Qahtani, F. Saffouri, M. Koc, ``Estimating the Cost of Summer Cooling in Bahrain'', \textit{IEEE GCC Conference and Exhibition}, May 8-11, Manama Bahrain.
+\bibitem{27} F. Saffouri, \textbf{I. S. Bayram}, M. Koc, ``Quantifying the Cost of Cooling in Qatar'', \textit{IEEE GCC Conference and Exhibition}, May 8-11, 2017, Manama Bahrain.
+\bibitem{28}F. Mumtaz and \textbf{I. S. Bayram}, ``Planning, Operation, and Protection of Microgrids: An Overview'', \textit{International Conference on Energy and Environment Research}, Sept 7-11, 2016, Barcelona, Spain.
+\bibitem{29} M. Ismail,\textbf{I. S. Bayram}, M. Abdallah, and K. Qaraqe, ``A system Planning Framework for Electric Vehicles", \textit{IEEE International Smart Grid Workshop}, Doha, Qatar, 2014 (\textbf{Best Paper Award}).
+\bibitem{30} \textbf{I. S. Bayram}, V. Zamani, R. Hanna, J. Kleissl, ``On the Evaluation of Plug-in Electric Vehicle Data of a Campus Charging Network'', \textit{IEEE Energy Conference}, Leuven, Belgium, 2016.
+\bibitem{31}  \textbf{I. S. Bayram} and H. Mohsenian-Rad, ``An Overview of Smart Grids in the GCC Region'', \textit{International Conference on Smart Grids for Smart Cities}, Toronto, Canada, 2015.
+\bibitem{32} \textbf{I. S. Bayram}, M Abdallah, Ali Tajer, and K. Qaraqe ``Energy Storage System Sizing for Peak Hour Utility Applications", \textit{IEEE International Conference on Communications}, London, UK, 2015.
+\bibitem{33} Qi Wang, \textbf{I. S. Bayram}, F. Granelli, and M. Devetsikiotis, ``Fast Power Charging Strategy for EV/PHEV in Parking Campus with Deployment of Renewable Energy", \textit{IEEE The International Workshop on Computer-Aided Modeling Analysis and Design of Communication Links and Networks}, Athens, Greece, 2014.
+\bibitem{34} \textbf{I. S. Bayram}, M.Z. Shakir, M. Abdallah, K. Qaraqe, ``A Survey on Energy Trading and Exchange in Smart Grid'', \textit{IEEE Global Conference on Signal and Information Processing}, Atlanta, USA, 2014.
+\bibitem{35} \textbf{I. S. Bayram}, M.Ismail, M Abdallah, K. Qaraqe, E. Serpedin ``A Pricing-based Load Shifting Framework For EV Fast Charging Stations", \textit{IEEE Smart Grid Communications Conference}, Venice, Italy, 2014.
+\bibitem{36}\textbf{I. S. Bayram}, M. Abdallah, K. Qaraqe, ``Providing QoS Guarantees to Multiple Classes of EVs Under Deterministic Grid Resources", \textit{IEEE International Energy Conference}, Dubrovnik, Croatia, 2014.
+\bibitem{37} Maria Carmen Falvo, Danilio Sbordone, \textbf{I. S. Bayram}, and Michael Devetsikiotis, ``A Review on EV Charging Stations: European and American Standards", \textit{IEEE International Symposium on Power Electronics, Electrical Drives, Automation and Motion}, Naples, Italy, 2014.
+ \bibitem{38} \textbf{I. S. Bayram},  G. Michailidis, M. Devetsikiotis,``Electric Power Resource Provisioning for Large Scale Public EV Charging Facilities", \textit{IEEE International Smart Grid Communications Conference}, Vancouver, Canada, 2013.
+\bibitem{39} \textbf{I. S. Bayram}, G. Michailidis, I. Papapanagiotou,  M. Devetsikiotis, ``Decentralized Control of EV Charging  in a Network of Fast Charging Stations", \textit{IEEE International Global Communications Conference}, Atlanta, USA, 2013.
+\bibitem{40}\textbf{I. S. Bayram}, G. Michailidis, M. Devetsikiotis, and B. Parkhideh
+ ``Strategies for  Competing DC Energy Storage Technologies for Fast Charging Stations", \textit{IEEE International
+Smart Grid Communications Conference}, Tainan City, Taiwan, 2012 (\textbf{Best Paper Award}).
+\bibitem{41} \textbf{I. S. Bayram}, G. Michailidis, M. Devetsikiotis, S. Bhattacharya,
+A. Chakrabortty, and F. Granelli, ``Local energy storage sizing in plugin
+hybrid electric vehicle charging stations under blocking probability
+constraints", \textit{IEEE
+International Smart Grid Communications Conference}, Brussels, Belgium, 2011 (\textbf{NSF Travel Grant}).
+
+
+\end{thebibliography}
+\end{document}
+
